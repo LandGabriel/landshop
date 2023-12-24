@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandShop</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="img/favicon-16x16.png">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="img/nike.avif" alt="Car">
+            <h2> Anuncie seus tênis!</h2>
+        </div>
+      
+        
+        <div class="form-container">
+            <div class="form-header">
+                <p>FORMULÁRIO</p>
+            </div>
+            
+            <div class="form-body">   
+                <div class="form-title">
+                    <h1>Land Shoes - O Seu Passo Rumo à Elegância!👟</h1>
+                </div>
+                <p>Descreva as características do seu tênis.</p>
+                
+                <form>
+                    <div class="box-input">
+                        <label for="title">Título do anúncio <span class="required-field">*</span></label>
+                        <input
+                            type="text"
+                            name="title"
+                            id="title"
+                            class="block"
+                            placeholder="Um título para anunciar seu tênis"
+                            minlength="1"
+                            maxlength="30"
+                            required
+                        />
+                    </div>
+                    <div class="box-input">
+                        <label for="price">Preço <span class="required-field">*</span></label>
+                        <input
+                            type="number"
+                            name="price"
+                            id="price"
+                            class="block"
+                            placeholder="Ex: R$200,00"
+                            required
+                        />
+                    </div>
+                    <div class="box-input">
+                        <label for="description">Descrição </label>
+                        <textarea
+                            type="text"
+                            name="description"
+                            id="description"
+                            class="block"
+                            placeholder="Descreva o estado do tênis, bom estado, pouco usado..."
+                           
+                        ></textarea>
+
+                        <div class="box-input">
+                            <label for="brand">Marca do tênis<span class="required-field">*</span></label>
+                            <input
+                                type="text"
+                                name="brand"
+                                id="brand"
+                                class="block"
+                                placeholder="Ex:Nike, Adidas, Puma"
+                        
+                                required
+                            />
+                        </div>
+                     
+                        <div class="box-input">
+                            <label for="model">Modelo do tênis<span class="required-field">*</span></label>
+                            <input
+                                type="text"
+                                name="model"
+                                id="model"
+                                class="block"
+                                placeholder="Ex: Air Max, Ultraboost, RS-X"
+                               
+                                required
+                            />
+                        </div>
+                        <div class="box-input">
+                          <label for="model">Nº do tênis<span class="required-field">*</span></label>
+                            <input
+                                type="number"
+                                name="size"
+                                id="size"
+                                class="block size-input"
+                                required
+                               >
+                        </div>
+                        <div class="box-input">
+                          <p>Estado do tênis: <span class="required-field">*</span></p>
+                             <input type="radio" id="used" name="usado" /> 
+                             <label for="used">Usado:</label>
+                             <input type="radio" id="new" name="usado" >
+                             <label for="new">Novo:</label>
+                      </div>
+                        <div class="box-input">
+                            <p>Tipo de fechamento:</p>
+                               <input type="radio" id="lace" name="closure" /> 
+                               <label for="lace">Cadarço:</label>
+                               <input type="radio" id="strap" name="closure" >
+                               <label for="strap">Tira de Velcro:</label>
+                        </div>
+                        
+                         <div class="optional-box">
+              <p>Características opcionais:</p>
+              <ul class="optional-list">
+                <li>
+                  <input
+                    type="checkbox"
+                    id="light"
+                    name="optional[]"
+                    value="light"
+                  />
+                  <label for="light">Leveza</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="comfort"
+                    name="optional[]"
+                    value="comfort"
+                  />
+                  <label for="comfort">Confortável</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="sport" name="optional[]" value="sport" />
+                  <label for="sport">Esportivo</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="casual"
+                    name="optional[]"
+                    value="casual"
+                  />
+                  <label for="casual">Casual</label>
+                </li>
+              </ul>
+            </div>
+            <div class="optional-box">
+              <ul class="optional-list">
+                <li>
+                  <input
+                    type="checkbox"
+                    id="running"
+                    name="optional[]"
+                    value="running"
+                  />
+                  <label for="running">Running</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="style"
+                    name="optional[]"
+                    value="style"
+                  />
+                 
+                  <label for="athletic">Athletic</label>
+                </li>
+                
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="cushioning"
+                      name="optional[]"
+                      value="cushioning"
+                    />
+                    <label for="cushioning">Amortecimento</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="versatility"
+                      name="optional[]"
+                      value="versatility"
+                    />
+                    <label for="versatility">Versatilidade</label>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+                            <div class="box-input">
+                            <p>Fotos do tênis:<span class="required-field">*</span></p>
+                            <input
+                            type="file"
+                            multiple
+                            accept="image/png, image/jpg"
+                            id="images"
+                            name="images"
+                            required>
+                            </div>
+                            <button class="button" type="submit">Enviar</button>
+                          </div>
+                        </div>
+                       
+                      
+                    </div>
+                </form>
+                
+            </div>
+            
+        </div>
+    </div>
+ <footer>
+        <p>&copy; By LandG</p>
+    </footer>
+</body>
+</html>
