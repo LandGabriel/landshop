@@ -202,26 +202,29 @@ margin-top: 15px;
       }
     }
   }
-  @media screen and (max-width: 896px) {
-      h1 {
-    font-size: 18px; 
-  }
-.h2, h3, h4, p, label{
-    font-size: 14px;
+ @media screen and (max-width: 896px) {
+    h1 {
+        font-size: 18px;
+    }
 
-     input {
-    width: 20%;  
-  }
-  .box-input {
-    width: 100%;  
-  }
+    h2, h3, h4, p, label {
+        font-size: 14px;
+    }
 
-  .input_image {
-    max-width: 55%; 
-  }
+    input {
+        width: 100%; 
+    }
 
-  .form-container {
-    width: 100%;
-    top: -12px;
-  }
+    .box-input {
+        margin-bottom: 20px; 
+    }
+
+    .input_image {
+        max-width: 100%; 
+    }
+
+    .form-container {
+        width: 100%;
+        top: -72px;
+    }
 }
