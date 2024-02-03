@@ -208,7 +208,10 @@ margin-top: 15px;
   }
 .h2, h3, h4, p, label{
     font-size: 14px;
-    
+
+     input {
+    width: 60%;  
+  }
   .box-input {
     width: 100%;  
   }
@@ -219,6 +222,6 @@ margin-top: 15px;
 
   .form-container {
     width: 40%;
-    top: -32px;
+    top: -42px;
   }
 }
