@@ -210,7 +210,7 @@ margin-top: 15px;
     font-size: 14px;
 
      input {
-    width: 60%;  
+    width: 20%;  
   }
   .box-input {
     width: 100%;  
@@ -221,7 +221,7 @@ margin-top: 15px;
   }
 
   .form-container {
-    width: 40%;
-    top: -42px;
+    width: 100%;
+    top: -12px;
   }
 }
