@@ -1,59 +1,66 @@
-
-* {
+*{
     padding: 0;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box; /* Added box-sizing for all elements */
 }
-
 body {
-    background-color: rgb(212, 212, 212);
+background-color: rgb(212, 212, 212);
 }
-
-h1, h2, h3, h4 {
-    color: #333;
+h1,h2,h3,h4 {
+    color:#333
 }
-
 p, label {
-    color: #444;
+    color: 444;
 }
 
-/* Form input styles */
 input {
-    border: none;
-    border-bottom: 2px solid #c9bebe;
-    padding: 10px 0;
-    width: 100%; /* Full-width input on smaller screens */
-    box-sizing: border-box; /* Include padding and border in width and height */
+border: none;
+border-bottom: 2px solid #c9bebe;
+padding: 10px 0;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="date"],
-input[type="file"],
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="file"],
+    textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#description{
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
 textarea {
-    width: 100%; /* Full-width input on smaller screens */
-    box-sizing: border-box; /* Include padding and border in width and height */
+    padding: 20 5px;
 }
-
-textarea {
-    padding: 20px 5px;
-}
-
 
 .header {
     position: relative;
     text-align: center;
     background-color: rgba(41, 22, 6, 0.534);
+    
+
 }
 
 .header::before {
-    /* Background image styles */
-    /* ... (unchanged) ... */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/shoe.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.6; 
+    z-index: -1; 
 }
 
 .header img {
-    max-width: 100%; /* Full-width image on smaller screens */
+    max-width: 100%;
     height: auto;
     object-fit: cover;
 }
@@ -63,58 +70,168 @@ header h2 {
     margin-top: 0;
 }
 
-
 .form-container {
     background-color: #ebe4dd;
-    width: 100%;
+    width: 60%;
     margin: 0 auto;
     position: relative;
-    top: -62px;
+    top: -62px
 }
-
 .form-header {
     border-bottom: 1px solid #dfdfdf;
     height: 45px;
+  }
+  .form-header p{
+    color: rgb(233, 68, 17);
+    border-bottom: 2px solid rgb(224, 1, 1);
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    height: 45px;
+    line-height: 45px;
+
+  }
+  img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .form-body {
+    padding: 20px;
+
+  }
+  .form-tittle{
+    margin-bottom: 15px;
+  }
+  .form-body p{
+    margin-bottom: 20px;
+ }
+ .required-field{
+    color:#d80835;
+ }
+ .box-input {
+    margin-bottom: 35px;
+ }
+ .block{
+    display: block;
+ }
+ 
+ .optional-box {
+  display: inline-block;
+  margin: 0 30px 30px 0;
+}
+.optional-box p {
+font-weight: bold;
+}
+.block.size-input {
+  width: 50px;
+ 
 }
 
-
-
-.form-body {
-    padding: 15px; 
+.optional-list li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+.optional-list{
+  margin: 0 30px 30px 0;
+  display: inline-block;
+}
+ 
+#mileage{ 
+    width: 10%;
+}
+ 
+  footer {
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    color: #f0720c;
+    text-align: center; 
+    padding: 10px;
+    font-size: 13px;
 }
 
-.form-tittle {
-    margin-bottom: 10px; 
+.box-input p{ 
+margin-top: 15px;
 }
 
-.form-body p {
-    margin-bottom: 15px; 
-}
+.button {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    color: #fcfcfc;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #e9a615;
+    cursor: pointer;
+    border: none;
+    &:after {
 
-
-@media screen and (max-width: 896px) {
-    h1 {
-        font-size: 18px;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f0720c;
+      z-index: -2;
+    
     }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: #d1320a;
+      transition: all .3s;
 
-    h2, h3, h4, p, label {
-        font-size: 14px;
+      z-index: -1;
     }
-
-    input {
-        width: 100%; 
+    &:hover {
+      color: #fffefe;
+      &:before {
+        width: 100%;
+      }
     }
+  }
+  
 
-    .box-input {
+  @media screen and (max-width: 768px) {
+    .form-container {
+        width: 80%;
+        top:-20px }
+        h1 {
+          font-size: 18px;
+      }
+  
+      h2, h3, h4, p, label {
+          font-size: 14px;
+      }
+      .box-input {
         margin-bottom: 20px; 
     }
 
-    .input_image {
-        max-width: 100%; 
     }
 
+
+@media screen and (max-width: 480px) {
     .form-container {
         width: 100%;
-        top: -12px;
+        top:-20px }
     }
+    h1 {
+      font-size: 18px;
+  }
+
+  h2, h3, h4, p, label {
+      font-size: 14px;
+  }
 }
